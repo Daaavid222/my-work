@@ -1,0 +1,307 @@
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+    
+    .w {
+        width: 940px;
+        margin: 0 auto;
+    }
+    
+    .shortcut {
+        height: 137px;
+    }
+    
+    .logo {
+        background: url(../images/logo.png) no-repeat;
+        background-position: 0px 37px;
+        width: 288px;
+        height: 137px;
+        float: left;
+    }
+    
+    .nav {
+        float: right;
+    }
+    
+    .nav ul li a {
+        display: block;
+        float: left;
+        font-size: 10px;
+        padding: 0px 10px;
+        border-left: 1px dashed rgb(214, 214, 214);
+        height: 35px;
+    }
+    
+    .nav ul li {
+        float: left;
+        margin-top: 59px;
+    }
+    
+    .nav ul li a h4 {
+        color: #808080;
+    }
+    
+    .nav ul li a p {
+        color: #b7b7b7;
+    }
+    
+    .background {
+        position: relative;
+        height: 336px;
+        background: url(../images/background.png);
+    }
+    
+    .bg {
+        position: relative;
+        top: 57%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url(../images/bgc.png) no-repeat;
+        height: 343px;
+        width: 940px;
+        background-position: -235px -156px;
+        border-radius: 10px;
+    }
+    
+    section {
+        overflow: hidden;
+    }
+    
+    .head {
+        padding: 20px;
+        margin: 20px;
+        text-align: center;
+        border-bottom: 1px solid rgb(229, 229, 229);
+    }
+    
+    .body ul li {
+        float: left;
+        width: 320px;
+        border-bottom: 1px solid rgb(229, 229, 229);
+    }
+    
+    section ul .child3,
+    section ul .child6 {
+        width: 300px;
+    }
+    
+    .logic {
+        width: 300px;
+        height: 200px;
+        background: url(../images/logic.png) no-repeat;
+    }
+    
+    .solution {
+        width: 320px;
+        height: 200px;
+        background: url(../images/solution.png) no-repeat;
+    }
+    
+    .culture {
+        width: 320px;
+        height: 200px;
+        background: url(../images/culture.png) no-repeat;
+    }
+    
+    section ul li div h1 {
+        /* padding-bottom: 15px;
+        font-size: 14px; */
+        color: #11719e;
+        font-weight: 500;
+    }
+    
+    section ul li div p {
+        color: #b7b7b7;
+    }
+    
+    section ul li p {
+        font-size: 10px;
+        color: #3e3e3e;
+    }
+    
+    .more {
+        width: 165px;
+        height: 25px;
+        background: url(../images/shadow.png) no-repeat;
+        margin: 35px 0;
+        padding-bottom: 15px;
+        font-size: 14px;
+        color: #11719e;
+    }
+    
+    .fl {
+        font-size: 10px;
+        float: left;
+        height: 25px;
+        line-height: 40px;
+        margin-left: 15px;
+        cursor: default;
+    }
+    
+    .fr {
+        margin-right: 10px;
+        float: right;
+        width: 20px;
+        height: 25px;
+        background: url(../images/narrow.png) no-repeat;
+        background-position: 0px 17px;
+    }
+    
+    li>h4 {
+        width: 300px;
+        margin-top: 45px;
+        padding-bottom: 12px;
+        font-weight: 500;
+        border-bottom: 1px dashed rgb(211, 211, 211);
+    }
+    
+    section li .newsletter {
+        font-weight: 900;
+    }
+    
+    li>p {
+        margin-top: 20px;
+    }
+    
+    .body ul .wifi,
+    .body ul .facebook,
+    .body ul .insgram,
+    .body ul .youtube,
+    .body ul .twitter {
+        width: 55px;
+        height: 55px;
+        float: left;
+        margin-left: 5px;
+        margin-top: 10px;
+        border: none;
+    }
+    
+    .wifi {
+        background: url(../images/wifi.png);
+    }
+    
+    .facebook {
+        background: url(../images/facebook.png);
+    }
+    
+    .insgram {
+        background: url(../images/insgram.png);
+    }
+    
+    .youtube {
+        background: url(../images/youtube.png);
+    }
+    
+    .twitter {
+        background: url(../images/twitter.png);
+    }
+    
+    .contact {
+        overflow: hidden;
+        width: 300px;
+    }
+    
+    .text {
+        border-radius: 5px;
+        width: 270px;
+        height: 37px;
+        padding-left: 30px;
+        margin-top: 17px;
+        border: 1px solid rgb(211, 211, 211);
+        outline: none;
+    }
+    
+    section ul li .email {
+        margin-top: 0px;
+    }
+    
+    .subscribe {
+        background: url(../images/blue.png) no-repeat;
+        margin-top: 10px;
+        color: white;
+    }
+    
+    .left {
+        line-height: 30px;
+    }
+    
+    .right {
+        background: url(../images/narrow1.png) no-repeat;
+        background-position: 0px 12px;
+    }
+    
+    .area {
+        width: 270px;
+        height: 155px;
+        padding-left: 30px;
+        margin-top: 17px;
+        border: 1px solid rgb(211, 211, 211);
+        resize: none;
+        border-radius: 5px;
+        outline: none;
+    }
+    
+    .new {
+        width: 300px;
+        height: 80px;
+        border-bottom: 1px dashed rgb(211, 211, 211);
+    }
+    
+    .firefox,
+    .firework,
+    .rainbow {
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-top: 2px;
+    }
+    
+    .firefox {
+        background: url(../images/firefox.png) no-repeat;
+    }
+    
+    .firework {
+        background: url(../images/firework.png) no-repeat;
+    }
+    
+    .rainbow {
+        background: url(../images/rainbow.png) no-repeat;
+    }
+    
+    .new>p {
+        margin: 15px 0px 0px 68px;
+        font-size: 10px;
+        color: #444444;
+    }
+    
+    footer {
+        position: relative;
+        height: 147px;
+        background-color: #333333;
+    }
+    
+    footer>section {
+        height: 10px;
+        background-color: #4c4c4c;
+    }
+    
+    .footer div {
+        margin-top: 5px;
+    }
+    
+    .footer div p {
+        margin-top: 13px;
+        font-size: 0.5em;
+        color: #6a6a6a;
+    }
+    
+    .footerleft {
+        float: left;
+    }
+    
+    .footerright {
+        float: right;
+    }

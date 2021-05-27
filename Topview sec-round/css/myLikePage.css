@@ -1,0 +1,169 @@
+.music-page {
+    margin-left: 23rem;
+    overflow-y: auto;
+}
+
+.music-list-header {
+    margin: 3rem 0;
+}
+
+.like-background {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 0.5rem;
+    background: url(../imgs/monkey.jpg) no-repeat center;
+    background-size: 18rem;
+}
+
+.btns-list {
+    margin: 0 2rem;
+}
+
+.btns-list h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.btns-list h1 span {
+    margin-right: 1rem;
+    padding: 0.2rem 0.3rem;
+    font-weight: 500;
+    font-size: 1rem;
+    vertical-align: text-top;
+    border-radius: 0.3rem;
+    border: 1px solid #ff4e4e;
+    color: #ff4e4e;
+}
+
+.user-like-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.user-like span {
+    line-height: 2.5rem;
+    vertical-align: text-bottom;
+    margin: 0.2rem;
+}
+
+.music-like-functions {
+    margin: 1rem 0;
+}
+
+.music-like-functions div {
+    margin-right: 1rem;
+    padding: 0.6rem 1rem;
+    font-size: 1.5rem;
+    border: 1px solid #d8d8d8;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.music-like-functions div:first-child {
+    background-color: #ff4e4e;
+    color: #fff;
+}
+
+.music-like-functions div span {
+    margin: 0.5rem;
+}
+
+.music-like-nav li {
+    margin: 0 1.5rem;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.music-search {
+    margin-left: auto;
+    margin-right: 1rem;
+    border: 1px solid #d8d8d8;
+    border-radius: 2rem;
+    height: 3rem;
+    background-color: #f7f7f7;
+}
+
+.music-search input {
+    outline: none;
+    width: 80%;
+    height: 100%;
+    border-radius: 2rem;
+    padding: 1rem;
+    border: none;
+    background-color: transparent;
+}
+
+.about-music-nav li {
+    font-size: 1.3rem;
+    color: #888888;
+}
+
+.music-search div {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.my-music .musics {
+    height: 3.2rem;
+}
+
+.my-music .black {
+    height: 3.2rem;
+}
+
+.my-music .new-music-info span {
+    font-size: 2rem;
+}
+
+.music-like-title {
+    margin-left: 7rem;
+    min-width: 28rem;
+    max-width: 33rem;
+    height: 4rem;
+    line-height: 4rem;
+}
+
+.music-like-singer,
+.music-like-from {
+    flex: 1;
+    font-size: 1.5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    min-width: 18rem;
+    height: 4rem;
+    line-height: 4rem;
+}
+
+.music-like-singer {
+    text-indent: 50%;
+}
+
+.music-like-time {
+    margin-right: 6rem;
+}
+
+.about-music-nav li:hover {
+    background-color: #f0f1f2;
+}
+
+#empty-box div {
+    justify-content: center;
+    flex-direction: column;
+}
+
+#empty-box p {
+    margin-top: 1.5rem;
+    color: #888888;
+    text-align: center;
+    width: 11rem;
+}
+
+#empty-box p:first-child {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #333;
+    width: 20rem;
+}

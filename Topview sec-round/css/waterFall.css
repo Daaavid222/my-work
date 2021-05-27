@@ -1,0 +1,37 @@
+.water-fall {
+    position: relative;
+    width: 90%;
+}
+
+.new-published {
+    height: 100%;
+}
+
+.item {
+    margin: 20px;
+    width: 20%;
+    height: auto;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.item:hover {
+    box-shadow: 0 0px 20px 5px rgb(0 0 0 / 30%);
+}
+
+.backTop {
+    position: fixed;
+    bottom: 10rem;
+    right: 12rem;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
+    border-radius: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.backTop:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,599 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网易云</title>
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/musicSend.css">
+    <link rel="stylesheet" href="css/musicPlay.css">
+    <link rel="stylesheet" href="css/myLikePage.css">
+    <link rel="stylesheet" href="css/waterFall.css">
+</head>
+
+<body class="skin-red-font">
+    <div class="main-page">
+        <section class="top skin-red">
+            <header class="header flex w">
+                <span class="playing-back" style="display: none;">&#xe602;</span>
+                <div class="logo-box flex">
+                    <div class="logo">&#xe604;</div>
+                    <h1>网易云音乐</h1>
+                </div>
+                <div class="search flex">
+                    <div class="back-to flex">
+                        <div>&#xe605;</div>
+                        <div>&#xe60a;</div>
+                    </div>
+                    <div class="search-box flex">
+                        <span class="search-btn">&#xe610;</span>
+                        <input type="text" class="search-input" placeholder="搜索">
+                    </div>
+                    <div class="speak-enter">&#xe62b;</div>
+                </div>
+                <div class="login flex">
+                    <div class="login-box flex">
+                        <div class="personal-img">
+                            <img src="imgs/monkey.jpg" alt="">
+                        </div>
+                        <div id="name">未登录</div>
+                        <div>&#xe60c;</div>
+                        <div id="hide">开通VIP</div>
+                    </div>
+                    <div class="personal-info" style="display: none;">
+                        <div>
+                            <div class="sign-in flex">
+                                <div><span>0</span>动态</div>
+                                <div><span>0</span>关注</div>
+                                <div><span>0</span>粉丝</div>
+                            </div>
+                            <div class="sign-btn"><span>&#xe698;</span>签到</div>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><span>&#xe611;</span>我的会员<span>&#xe60a;</span></li>
+                                <li><span>&#xe8a9;</span>等级<span>&#xe60a;</span></li>
+                                <li><span>&#xe614;</span>商城<span>&#xe60a;</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><span>&#xe634;</span>个人信息设置<span>&#xe60a;</span></li>
+                                <li><span>&#xe64e;</span>绑定社交账号<span>&#xe60a;</span></li>
+
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li class="change-img">
+                                    <input type="file" class="addfile">
+                                    <div>更改头像</div>
+                                </li>
+                                <li id="sign-out"><span>&#xe613;</span>退出登录<span>&#xe60a;</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skin-change">&#xe83d;
+                        <div class="skin-list" id="change-skin" style="display: none;">
+                            <h3>主题</h3>
+                            <ul class="flex">
+                                <li>
+                                    <p>炫酷黑</p>
+                                    <div class="checked" style="display: none;">&#xe627;</div>
+                                </li>
+                                <li>
+                                    <p>官方红</p>
+                                    <div class="checked">&#xe627;</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>&#xe63b;</div>
+                    <div>&#xe785;</div>
+                    <div>|</div>
+                    <div>&#xea74;</div>
+                    <div>&#xe63f;</div>
+                    <div>&#xe651;</div>
+                    <div>&#xe606;</div>
+                </div>
+            </header>
+        </section>
+        <section class="middle w">
+            <div class="personal-page" style="display: block;">
+                <nav class="personal-nav">
+                    <div class="about-me">
+                        <ul>
+                            <li class="navs">发现音乐</li>
+                            <li class="navs">视频</li>
+                            <li class="navs">朋友</li>
+                            <li class="navs">直播</li>
+                            <li class="navs">私人FM</li>
+                        </ul>
+                    </div>
+                    <div class="about-me">
+                        <h4>我的音乐</h4>
+                        <ul>
+                            <li class="navs"><span>&#xe609;</span>本地音乐</li>
+                            <li class="navs"><span>&#xe624;</span>下载管理</li>
+                            <li style="margin-left: -0.4rem;" class="navs"><span>&#xe7da;</span>我的音乐云盘</li>
+                            <li class="navs"><span>&#xe60b;</span>我的电台</li>
+                            <li class="navs"><span>&#xe89f;</span>我的收藏</li>
+                        </ul>
+                    </div>
+                    <div class="about-me">
+                        <h4>创建的歌单<span>&#xe60c;</span><span id="add-musiclist" style="margin-left: 5rem;font-size:2rem; cursor: pointer;">+</span></h4>
+                        <ul id="add">
+                            <li id="my-like-musics" class="navs"><span>&#xe607;</span>我喜欢的音乐</li>
+
+                        </ul>
+                    </div>
+                    <div class="about-me">
+                        <h4>收藏的歌单<span>&#xe60c;</span></h4>
+                        <ul>
+                            <li class="navs"><span>&#xe600;</span></li>
+                            <li class="navs"><span>&#xe600;</span></li>
+                        </ul>
+                    </div>
+                </nav>
+                <aside class="function-page">
+                    <nav class="function-nav">
+                        <ul>
+                            <li class="function-nav-active">个性推荐</li>
+                            <li>歌单</li>
+                            <li>主播电台</li>
+                            <li>排行榜</li>
+                            <li>歌手</li>
+                            <li>最新音乐</li>
+                        </ul>
+                    </nav>
+                    <div class="function-recommend">
+                        <div class="slider">
+                            <div class="imgs">
+                                <span class="left">&lt</span>
+                                <span class="right">&gt</span>
+                            </div>
+                        </div>
+                        <div class="recommends">
+                            <h3>推荐歌单<span>&#xe60a;</span></h3>
+                            <div>
+                                <div class="songs">
+                                    <div class="recommend-box">
+                                        <div class="content">
+                                            <img src="imgs/monkey.jpg" alt="">
+                                        </div>
+                                        <p>每日歌曲推荐</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>我那长发飘飘的梦想</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>致加班人</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>华语私人定制</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>写作业听歌</p>
+                                    </div>
+                                </div>
+                                <div class="songs">
+                                    <div class="recommend-box">
+                                        <div class="content">
+                                            <img src="imgs/monkey.jpg" alt="">
+                                        </div>
+                                        <p>批改作业专用歌单</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>好听到可以单曲循环</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>冷战总赢的那位脑子多多少少沾点问题</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>粤语歌曲</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>123</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommends">
+                            <h3>独家放送<span>&#xe60a;</span></h3>
+                            <div class="only-send">
+                                <div class="recommend-box">
+                                    <div></div>
+                                    <p>《超级面对面》第235期</p>
+                                </div>
+                                <div class="recommend-box">
+                                    <div></div>
+                                    <p>《超级面对面》第236期</p>
+                                </div>
+                                <div class="recommend-box">
+                                    <div></div>
+                                    <p>《超级面对面》第237期</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommends">
+                            <h3>最新音乐<span>&#xe60a;</span></h3>
+                            <div class="new-music flex">
+                                <div class="new-music-content"></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="new-music flex">
+                                <div class=""></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="new-music flex">
+                                <div class=""></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="recommends">
+                            <h3>推荐MV<span>&#xe60a;</span></h3>
+                            <div>
+                                <div class="only-send">
+                                    <div class="recommend-box">
+                                        <div></div>
+                                        <p>《超级面对面》第235期</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div></div>
+                                        <p>《超级面对面》第236期</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div></div>
+                                        <p>《超级面对面》第237期</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommends">
+                            <h3>主播电台<span>&#xe60a;</span></h3>
+                            <div>
+                                <div class="songs">
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>批改作业专用歌单</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>好听到可以单曲循环</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>冷战总赢的那位脑子多多少少沾点问题</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>粤语歌曲</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>123</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommends">
+                            <h3>听听<span>&#xe60a;</span></h3>
+                            <div>
+                                <div class="songs">
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>批改作业专用歌单</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>好听到可以单曲循环</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>冷战总赢的那位脑子多多少少沾点问题</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>粤语歌曲</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>123</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommends">
+                            <h3>看看<span>&#xe60a;</span></h3>
+                            <div>
+                                <div class="see">
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>123</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>123</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>123</p>
+                                    </div>
+                                    <div class="recommend-box">
+                                        <div class="content"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>123</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more-btns">
+                            <p>现在可以根据个人喜好，自由调整首页栏目顺序啦~</p>
+                            <button>调整栏目顺序</button>
+                        </div>
+                    </div>
+                    <div class="function-music-send" style="display: none;">
+                        <div class="new-music-nav flex">
+                            <div class="new-music-nav-box new-music-nav-active">新歌速递</div>
+                            <div class="new-music-nav-box">新碟上架</div>
+                        </div>
+                        <nav class="music-types flex">
+                            <div class="types">
+                                <ul class="flex">
+                                    <li>全部</li>
+                                    <li>华语</li>
+                                    <li>欧美</li>
+                                    <li>韩国</li>
+                                    <li>日本</li>
+                                </ul>
+                            </div>
+                            <div class="select-all">
+                                <div class="play-all">播放全部</div>
+                                <div class="add-all">收藏全部</div>
+                            </div>
+                        </nav>
+                        <div class="music-list" style="display: block;">
+
+                            <div class="pages">
+                                <ul class="flex">
+                                    <li class="act">1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="new-published" style="display: none;">
+                            <div class="water-fall"></div>
+                            <div class="backTop" style="display: none;">返回顶部</div>
+                        </div>
+                    </div>
+                </aside>
+                <div class="music-page" style="display: none;">
+                    <div class="music-list-header flex ">
+                        <div class="like-background"></div>
+                        <div class="btns-list">
+                            <h1 id="listTitle"><span>歌单</span>我喜欢的音乐</h1>
+                            <div class="user-like">
+                                <img src="imgs/monkey.jpg" alt="" class="user-like-img">
+                                <span id="userSet">username</span>
+                                <span>创建</span>
+                            </div>
+                            <div class="music-like-functions flex">
+                                <div><span>&#xe655;</span>播放全部<span>+</span></div>
+                                <div><span>&#xe89f;</span>收藏</div>
+                                <div><span>&#xe670;</span>分享</div>
+                                <div><span>&#xe624;</span>下载全部</div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="music-like-nav flex">
+                        <ul class="flex">
+                            <li class="function-nav-active">歌曲列表</li>
+                            <li>评论</li>
+                            <li>收藏者</li>
+                        </ul>
+                        <div class=" music-search flex">
+                            <input type="text" placeholder="搜索歌单音乐" id="searchMusic">
+                            <div id="search-songs">&#xe610;</div>
+                        </div>
+                    </nav>
+                    <nav>
+                        <ul class="about-music-nav flex">
+                            <li class="music-like-title">音乐标题</li>
+                            <li class="music-like-singer">歌手</li>
+                            <li class="music-like-from">专辑</li>
+                            <li class="music-like-time">时长</li>
+                        </ul>
+                    </nav>
+                    <div class="my-music" style="display: block;">
+                    </div>
+                    <div id="empty-box">
+                        <div class="flex">
+                            <p>暂时还没有音乐</p>
+                            <p> 赶快去收藏你喜欢的音乐</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="play-page" style="display: none;">
+                <div class="playing">
+                    <div class="song-header">
+                        <h1 class="song-name">123</h1>
+                    </div>
+                    <div class="playing-mid flex">
+                        <div class="song-left">
+                            <div class="song-left-img">
+                                <img src="imgs/monkey.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="song-mid">
+                            <p>123</p>
+                            <p>456</p>
+                            <p>789</p>
+                        </div>
+                        <div class="song-right">
+                            <div class="right-lis">
+                                <h4>包含这首歌的歌单</h4>
+                                <ul>
+                                    <li class="flex">
+                                        <div class="right-color"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>说唱</p>
+                                    </li>
+                                    <li class="flex">
+                                        <div class="right-color"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>12123153</p>
+                                    </li>
+                                    <li class="flex">
+                                        <div class="right-color"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>123546453</p>
+                                    </li>
+                                </ul>
+                                <h4>喜欢这首歌的人也听</h4>
+                                <ul>
+                                    <li class="flex">
+                                        <div class="right-color"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>4531235</p>
+                                    </li>
+                                    <li class="flex">
+                                        <div class="right-color"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>12345345</p>
+                                    </li>
+                                    <li class="flex">
+                                        <div class="right-color"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>153453486</p>
+                                    </li>
+                                    <li class="flex">
+                                        <div class="right-color"><img src="imgs/monkey.jpg" alt=""></div>
+                                        <p>15348435</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comments">
+                        <h4>全部评论</h4>
+                        <div class="write-comment"><span>&#xe63c;</span>写评论</div>
+                        <div class="empty-comment">
+                            <div>
+                                <p>还没有评论</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="geted" style="display: none;">
+                <div class="geted-header">播放列表</div>
+            </div>
+        </section>
+        <section class="music-play">
+            <div class="bottom flex w">
+                <div class="about-music">
+                    <div class="music-function-btns flex">
+                        <div class="small">&#xe602;</div>
+                        <div class="functions">
+                            <ul class="flex">
+                                <li>&#xe607;</li>
+                                <li>&#xe89f;</li>
+                                <li>&#xe624;</li>
+                                <li>&#xe69a;</li>
+                                <li>&#xe670;</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="music-info">
+                        <div class="info-box">
+                            <img src="imgs/monkey.jpg" alt="">
+                        </div>
+                        <div>
+                            <h3>123</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="play-function">
+                    <div>
+                        <ul class="play-btns">
+                            <li>&#xe63a;</li>
+                            <li>&#xe601;</li>
+                            <li>&#xe655;</li>
+                            <li>&#xe61a;</li>
+                            <li>词</li>
+                        </ul>
+                    </div>
+                    <div class="time">
+                        <div class="count-time">00:00</div>
+                        <div class="bar">
+                            <div class="now"><span></span></div>
+                        </div>
+                        <div class="count-time">123</div>
+                    </div>
+                    <audio src="https://recruit-file.topviewclub.cn/file/assert2021/music/Akie%E7%A7%8B%E7%BB%98%20-%20%E4%B8%8A%E5%B1%B1%E5%B2%97%EF%BC%88%E7%BF%BB%E8%87%AA%20%E6%B4%9B%E5%A4%A9%E4%BE%9D%EF%BC%89.mp3"></audio>
+                </div>
+                <div class="other-btns flex">
+                    <div><button>无损</button></div>
+                    <div font>&#xe60e;</div>
+                    <div>&#xe60f;
+                    </div>
+                    <div class="bar">
+                        <div class="now" id="now"><span></span></div>
+                    </div>
+                    <div id="music-list">&#xe70d;</div>
+                </div>
+            </div>
+
+    </div>
+    </section>
+    </div>
+    <div class="register-box" style="display: none;">
+        <div class="register">
+            <h4 class="flex">账号密码登录<span>&#xe606;</span></h4>
+            <div class="register-function flex">
+                <input type="text" id="username" placeholder="请输入账号">
+                <input type="password" id="password" placeholder="请输入密码">
+            </div>
+            <button class="sign-in-btn">登录</button>
+            <button class="new-enter-btn" style="display: none;">注册</button>
+            <div class="question">
+                还没有账号？<span class="question-btn">注册</span>
+            </div>
+            <div class="question" style="display: none;">
+                已有账号？<span class="question-btn">登录</span>
+            </div>
+        </div>
+    </div>
+    <div class="creat-box" style="display: none;">
+        <div id="creat-box">
+            <h3 class="creat-header">新建歌单<span class="cancel-creat">&#xe606;</span></h3>
+            <div class="creat-content"><input type="text" id="creat-content" placeholder="请输入新歌单标题"></div>
+            <button class="creat-btn">创建</button>
+        </div>
+    </div>
+    <div class="comment-box" style="display: none;">
+        <div id="comment-box">
+            <h3 class="comment-title">发表您的评论<span id="cancel-comment">&#xe606;</span></h3>
+            <div class="enter-comment">
+                <textarea id="textarea" cols="30" rows="10" placeholder="请输入评论"></textarea>
+            </div>
+            <button class="comment-btn">发表</button>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/waterFall.js"></script>
+    <script src="js/newMusic.js"></script>
+    <script src="js/personalInfo.js"></script>
+    <script src="js/play.js"></script>
+</body>
+
+</html>
